@@ -18,8 +18,21 @@
   "homepage": "https://github.com/smhmurat/personal-portfolio-template#readme",
   "dependencies": {},
   "devDependencies": {
+    "@tuanpham-dev/gulp-liquidjs": "0.0.8",
+    "autoprefixer": "^10.2.5",
     "browser-sync": "^2.26.14",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "plumber": "^0.4.8",
+    "postcss": "^8.3.0"
   }
 }
