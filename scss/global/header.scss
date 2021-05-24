@@ -1,33 +1,98 @@
 .Header {
-
     border-bottom: 1px solid #ddd;
+
     .container {
+        position: relative;
         display: flex;
         align-items: center;
-        height: 64px;
+        height: 75px;
     }
 
     &-logo {
         img {
-            width: 144px;
+            width: 150px;
         }
     }
 
-    &-menu {
+    &-switch {
         margin-left: auto;
+        color: $color-secondary; 
+        position: relative;
+        left: 10px;
+
+        @include mq() { 
+            display: none;
+         }
+    }
+
+    &-menu {
+        opacity: 0;
+        transform: translateX(100%);
+        transition: .2s;
         display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding-left: $gutter;
+        padding-right: $gutter;
+        padding-bottom: 20px;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 10px 30px rgba(black, .2);
+
+        .Header.menu-show & {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        @include mq('tablet') { 
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0s;
+            margin-left: auto;
+            flex-direction: row;
+            position: static;
+            box-shadow: none;
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+         }
 
         &-user {
             display: flex;
-            margin-right: 10px;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+
+            @include mq('tablet') { 
+                flex-direction: row;
+                padding-bottom: 0;
+             }
+
             a {
+                width: 100%;
                 display: inline-flex;
                 align-items: center;
+                justify-content: center;
                 padding-left: 20px;
                 padding-right: 20px;
                 border-radius: $border-radius;
                 height: $finger-size;
                 color: $color-secondary;
+
+                &:nth-child(1) {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+
+                @include mq('tablet') { 
+                    &:nth-child(1) {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                    }
+                 }
 
                 &:nth-child(2) {
                     background-color: $color-secondary;
@@ -36,13 +101,16 @@
             }
         }
 
-        &-switch {
-            color: $color-secondary;   
-        }
+
 
         &-helper {
             display: flex;
-            align-items: center;
+            justify-content: center;
+
+            @include mq('tablet') { 
+                margin-left: 10px;
+             }
+
             select {
                 color: $color-secondary;
                 appearance: none;
