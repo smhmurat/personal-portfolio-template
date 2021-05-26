@@ -498,3 +498,21 @@ a, select {
     font-weight: 600;
     line-height: 18px;
     letter-spacing: 0.2px; }
+
+.Showcase {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ccc;
+  text-align: center;
+  color: #373F41; }
+
+.Search {
+  background-color: #FBBE00;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
+  .Search-form {
+    position: relative;
+    display: flex; }
+  .Search .asd {
+    position: absolute;
+    right: 0; }
