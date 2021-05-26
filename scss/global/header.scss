@@ -1,11 +1,13 @@
 .Header {
+    background-color: rgba($color-secondary, .06);
     border-bottom: 1px solid #ddd;
+    height: 75px;
 
     .container {
         position: relative;
         display: flex;
         align-items: center;
-        height: 75px;
+        height: 100%;
     }
 
     &-logo {
@@ -26,8 +28,10 @@
     }
 
     &-menu {
+        margin-top: 1px;
+        pointer-events: none;
         opacity: 0;
-        transform: translateX(100%);
+        // transform: translateX(100%);
         transition: .2s;
         display: flex;
         position: absolute;
@@ -47,8 +51,10 @@
         }
         
         @include mq('tablet') { 
+            margin-top: 0;
+            pointer-events: auto;
             opacity: 1;
-            transform: translateY(0);
+            // transform: translateY(0);
             transition: 0s;
             margin-left: auto;
             flex-direction: row;
@@ -78,6 +84,9 @@
                 justify-content: center;
                 padding-left: 20px;
                 padding-right: 20px;
+                font-family: $font-family;
+                font-style: normal;
+                font-weight: bold;
                 border-radius: $border-radius;
                 height: $finger-size;
                 color: $color-secondary;

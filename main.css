@@ -347,11 +347,10 @@ td {
   padding: 0; }
 
 body {
-  font-size: 16px;
-  font-family: "Noto Sans JP", "Roboto", "Arial", sans-serif; }
+  font-family: "Mulish", "Roboto", "Arial", sans-serif; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -383,12 +382,14 @@ a, select {
   fill: currentColor; }
 
 .Header {
-  border-bottom: 1px solid #ddd; }
+  background-color: rgba(60, 100, 177, 0.06);
+  border-bottom: 1px solid #ddd;
+  height: 75px; }
   .Header .container {
     position: relative;
     display: flex;
     align-items: center;
-    height: 75px; }
+    height: 100%; }
   .Header-logo img {
     width: 150px; }
   .Header-switch {
@@ -400,8 +401,9 @@ a, select {
       .Header-switch {
         display: none; } }
   .Header-menu {
+    margin-top: 1px;
+    pointer-events: none;
     opacity: 0;
-    transform: translateX(100%);
     transition: .2s;
     display: flex;
     position: absolute;
@@ -419,8 +421,9 @@ a, select {
       transform: translateX(0); }
     @media (min-width: 768px) {
       .Header-menu {
+        margin-top: 0;
+        pointer-events: auto;
         opacity: 1;
-        transform: translateY(0);
         transition: 0s;
         margin-left: auto;
         flex-direction: row;
@@ -446,6 +449,9 @@ a, select {
         justify-content: center;
         padding-left: 20px;
         padding-right: 20px;
+        font-family: "Mulish", "Roboto", "Arial", sans-serif;
+        font-style: normal;
+        font-weight: bold;
         border-radius: 3px;
         height: 40px;
         color: #3C64B1; }
@@ -476,3 +482,19 @@ a, select {
         padding-right: 10px;
         border-radius: 3px;
         height: 40px; }
+
+.Navigation {
+  background-color: rgba(60, 100, 177, 0.12);
+  height: 50px; }
+  .Navigation .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll; }
+  .Navigation-item {
+    color: #373F41;
+    margin-right: 30px;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.2px; }

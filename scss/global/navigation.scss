@@ -1,0 +1,20 @@
+.Navigation {
+    background-color: rgba($color-secondary, .12);
+    height: 50px;
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+    }
+
+    &-item {
+        color: $color-text;
+        margin-right: 30px;
+        font-size: $font-size-small;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+    }
+}
