@@ -12,9 +12,22 @@
 <body>
     <!-- SVG Elements -->
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
         <defs>
             <symbol id="icon-menu" viewBox="0 0 32 32">
                 <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+            </symbol>
+            <symbol id="icon-user" viewBox="0 0 24 24">
+                <path d="M13.5 16.561v-1.237c1.652-0.931 3-3.252 3-5.574 0-3.728 0-6.75-4.5-6.75s-4.5 3.022-4.5 6.75c0 2.322 1.348 4.643 3 5.574v1.237c-5.088 0.416-9 2.916-9 5.939h21c0-3.023-3.912-5.523-9-5.939z"></path>
+            </symbol>
+            <symbol id="icon-calendar" viewBox="0 0 24 24">
+                <path d="M7.5 9h3v3h-3zM12 9h3v3h-3zM16.5 9h3v3h-3zM3 18h3v3h-3zM7.5 18h3v3h-3zM12 18h3v3h-3zM7.5 13.5h3v3h-3zM12 13.5h3v3h-3zM16.5 13.5h3v3h-3zM3 13.5h3v3h-3zM19.5 0v1.5h-3v-1.5h-10.5v1.5h-3v-1.5h-3v24h22.5v-24h-3zM21 22.5h-19.5v-16.5h19.5v16.5z"></path>
+            </symbol>
+            <symbol id="icon-location" viewBox="0 0 24 24">
+                <path d="M12 0c-4.142 0-7.5 3.358-7.5 7.5 0 7.5 7.5 16.5 7.5 16.5s7.5-9 7.5-16.5c0-4.142-3.358-7.5-7.5-7.5zM12 12c-2.485 0-4.5-2.015-4.5-4.5s2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5-2.015 4.5-4.5 4.5z"></path>
+            </symbol>
+            <symbol id="icon-checkmark2" viewBox="0 0 24 24">
+                <path d="M9.315 21.509l-9.325-9.178 4.626-4.553 4.699 4.625 10.069-9.911 4.626 4.553-14.695 14.464zM2.529 12.33l6.786 6.679 12.156-11.964-2.087-2.054-10.069 9.911-4.699-4.625-2.087 2.054z"></path>
             </symbol>
         </defs>
     </svg>
@@ -63,30 +76,41 @@
                 <small>Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad, nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te.</small>
                 <div class="Search">
                     <form class="Search-form" action="">
-                        <div>
-                            <div>
-                                <input type="text">
+                        <div class="Search-form-item">
+                            <div class="form-item">
+                                <svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>
+                                <input class="text" type="text" placeholder="Location">
                             </div>
-                            <small>Lorem ipsum dolor sit.</small>
+                            <small class="form-description">Destination, property name or address
+                            </small>
                         </div>
-                        <div>
-                            <div>
-                                <input type="date">
+                        <div class="Search-form-item">
+                            <div class="form-item">
+                                <svg class="icon icon-calendar"><use xlink:href="#icon-calendar"></use></svg>
+                                <input class="text" type="date">
                             </div>
                             <small>Lorem.</small>
                         </div>
-                        <div>
-                            <select value="">
+                        <div class="Search-form-item">
+                            <div class="form-item">
+                                <svg class="icon icon-user"><use xlink:href="#icon-user"></use></svg>
+                            <select class="select" value="">
                                 <option value="123">123</option>
                             </select>
+                            </div>
                         </div>
-                        <div>
-                            <button type="button">
+                        <div class="Search-form-item">
+                            <button class="button button-full" type="button">
                                 Let's get started
                             </button>
-                        </div>
-                        <div class="asd">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <div class="for-work">
+                                <label class="form-checkbox" for="">Are you travelling for work?
+                                <div class="checkbox">
+                                    <svg class="icon icon-checkmark2"><use xlink:href="#icon-checkmark2"></use></svg>
+                                    <input type="checkbox">
+                                </div>
+                                </label>
+                            </div>
                         </div>
                     </form>
                 </div>

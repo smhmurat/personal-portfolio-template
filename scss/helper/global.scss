@@ -17,19 +17,26 @@ a, select {
 .button {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     height: $finger-size;
-    background-color: transparent;
+    background-color: $color-secondary;
     border-radius: $border-radius;
-    
+    font-family: $font-family;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+
+    &-full {
+        width: 100%;
+    }
 
     &-icon {
         justify-content: center;
         padding-left: 0;
         padding-right: 0;
         width: $finger-size;
-
     }
 
 }
@@ -41,4 +48,60 @@ a, select {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+}
+
+.text {
+    font-family: inherit;
+    border: 0;
+    height: $finger-size;
+    border-radius: $border-radius;
+    color: $color-primary;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+
+    &::placeholder,
+    &::-webkit-datetime-edit {
+        color: rgba($color-primary, .5);
+    }
+}
+
+.select {
+    border: 0;
+    background-color: #fff;
+    font-family: inherit;   
+    display: inline-block;
+    width: 100%;
+    border-radius: $border-radius;
+    height: $finger-size;
+    font-weight: bold;
+}
+
+.form-item {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-primary;
+    }
+
+    .text {
+        padding-left: 40px;
+    }
+
+    .select {
+        padding-left: 40px;
+    }
+}
+
+.form-description {
+    margin-top: 8px;
+}
+
+.form-checkbox {
+    display: flex;
 }

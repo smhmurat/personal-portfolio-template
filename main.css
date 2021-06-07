@@ -362,11 +362,18 @@ a, select {
 .button {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
   height: 40px;
-  background-color: transparent;
-  border-radius: 3px; }
+  background-color: #3C64B1;
+  border-radius: 3px;
+  font-family: "Mulish", "Roboto", "Arial", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff; }
+  .button-full {
+    width: 100%; }
   .button-icon {
     justify-content: center;
     padding-left: 0;
@@ -381,9 +388,50 @@ a, select {
   stroke: currentColor;
   fill: currentColor; }
 
+.text {
+  font-family: inherit;
+  border: 0;
+  height: 40px;
+  border-radius: 3px;
+  color: #373F41;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%; }
+  .text::placeholder, .text::-webkit-datetime-edit {
+    color: rgba(55, 63, 65, 0.5); }
+
+.select {
+  border: 0;
+  background-color: #fff;
+  font-family: inherit;
+  display: inline-block;
+  width: 100%;
+  border-radius: 3px;
+  height: 40px;
+  font-weight: bold; }
+
+.form-item {
+  position: relative; }
+  .form-item .icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #373F41; }
+  .form-item .text {
+    padding-left: 40px; }
+  .form-item .select {
+    padding-left: 40px; }
+
+.form-description {
+  margin-top: 8px; }
+
+.form-checkbox {
+  display: flex; }
+
 .Header {
   background-color: rgba(60, 100, 177, 0.06);
-  border-bottom: 1px solid #ddd;
   height: 75px; }
   .Header .container {
     position: relative;
@@ -406,10 +454,10 @@ a, select {
     opacity: 0;
     transition: .2s;
     display: flex;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: 100%;
+    top: 75px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -500,19 +548,21 @@ a, select {
     letter-spacing: 0.2px; }
 
 .Showcase {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: #ccc;
-  text-align: center;
-  color: #373F41; }
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #ccc url(img/showcase_back.jpeg) no-repeat center center/cover;
+  color: #fff; }
 
 .Search {
+  margin-top: 30px;
   background-color: #FBBE00;
-  padding: 40px;
+  padding: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
   .Search-form {
     position: relative;
-    display: flex; }
-  .Search .asd {
-    position: absolute;
-    right: 0; }
+    display: flex;
+    flex-direction: column; }
+    .Search-form-item + .Search-form-item {
+      margin-top: 20px; }
+  .Search .for-work {
+    margin-top: 10px; }
